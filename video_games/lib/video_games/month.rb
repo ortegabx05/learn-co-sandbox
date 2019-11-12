@@ -1,12 +1,11 @@
   class VideoGames::Month
   
-attr_accessor :title, :url, 
+attr_accessor :name
   
     @@all = []
   
-  def initialize(title)
-    @title = title
-    @url = url
+  def initialize(name)
+    @name = name
     save
   end
   
