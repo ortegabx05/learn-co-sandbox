@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-
+ 
 require_relative '../lib/video_games'
 
+
 VideoGames::CLI.new.call
+

@@ -1,4 +1,4 @@
-git push -u origin master
+#!/usr/bin/env bash
 set -euo pipefail
 IFS=$'\n\t'
 set -vx
