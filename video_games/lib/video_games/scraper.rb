@@ -18,7 +18,7 @@ end
     games = doc.css("button.jsx-3959444234.title.link")
 
     games.each do |g|
-     game = g.text
+     name = g.text
     
     VideoGames::Games.new(name,month)
   end
