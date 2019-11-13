@@ -1,7 +1,6 @@
-  class VideoGames::Month
+class VideoGames::Month
   
-attr_accessor :name
-attr_writer :games 
+attr_accessor :name, :games
   
     @@all = []
   
@@ -16,8 +15,9 @@ attr_writer :games
     @@all
   end
   
+  
   def get_games
-    VideoGames::Scraper.scrape_games(self) if @games.empty?
+    VideoGames::Scraper.scrape_games(self)  if @games.empty?
   end
   
   def save

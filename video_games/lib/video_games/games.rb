@@ -1,9 +1,9 @@
 class VideoGames::Games
   
-attr_accessor :name, :month, :date
-    @@all = []
+  attr_accessor :name, :month
+  @@all = []
   
-  def initialize(name,month)
+  def initialize(name, month)
     @name = name
     @month = month
     add_to_month
@@ -14,8 +14,8 @@ attr_accessor :name, :month, :date
     @@all
   end
   
-  def add_to_month
-    @month.get_games << self unless @month.get_games.include?(self)
+   def add_to_month
+    @month.games << self unless @month.games.include?(self)
   end
   
   def save
