@@ -16,8 +16,8 @@ class VideoGames::CLI
  
  def list_months
     puts "Choose a month to see the upcoming video games"
-    @months.each.with_index(1) do |month,index|
-     puts "#{index}. #{month.name}"
+    @months.each.with_index(1) do |month,idx|
+     puts "#{idx}. #{month.name}"
     end
  end
  
@@ -33,10 +33,13 @@ class VideoGames::CLI
  
  def show_games_for(chosen_months)
    month = @months[chosen_months - 1]
-   games = month.games
+   month.get_games
    puts "Here are the games for #{month.name}"
+   month.get_games.each.with_index(1) do |game,idc|
+     puts "#{idx}. #{game.name}"
  end
  
+end
 end
 
    

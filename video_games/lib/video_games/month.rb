@@ -16,9 +16,8 @@ attr_writer :games
     @@all
   end
   
-  def games
-    VideoGames::Scraper.scrape_games(self) if @egames.empty?
-    @games
+  def get_games
+    VideoGames::Scraper.scrape_games(self) if @games.empty?
   end
   
   def save

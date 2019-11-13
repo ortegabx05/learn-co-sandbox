@@ -11,4 +11,10 @@ class VideoGames::Scraper
   end
 end
 
+
+  def self.scrape_games(month)
+    VideoGames::Games.new("sport game", month)
+    VideoGames::Games.new("puzzle game", month)
+  end
+  
 end
