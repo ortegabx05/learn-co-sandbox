@@ -13,8 +13,15 @@ end
 
 
   def self.scrape_games(month)
-    VideoGames::Games.new("sport game", month)
-    VideoGames::Games.new("puzzle game", month)
+     doc = Nokogiri::HTML(open("https://www.ign.com/upcoming/games"))
+   
+    games = doc.css("button.jsx-3959444234.title.link")
+
+    games.each do |g|
+     game = g.text
+    
+    VideoGames::Games.new(name,month)
   end
+end
   
 end
