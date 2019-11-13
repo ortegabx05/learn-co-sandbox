@@ -33,7 +33,8 @@ class VideoGames::CLI
  
  def show_games_for(chosen_months)
    month = @months[chosen_months - 1]
-   puts "Here are the games for #{month}"
+   games = month.games
+   puts "Here are the games for #{month.name}"
  end
  
 end
